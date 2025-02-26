@@ -1,4 +1,4 @@
-require("dotenv").config("../.env");
+require("dotenv").config();
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 
@@ -11,7 +11,7 @@ module.exports = {
     collectionName: 'sessions',
   }),
   cookie: {
-    secure: false,
+    secure: true,
     httpOnly: true,
     maxAge: 1000 * 60 * 60 * 24, // 1 day
   },
