@@ -35,8 +35,8 @@ exports.checkGrammar = async (req, res) => {
 			messages: [
 				{
 					role: 'system',
-					content: `Analyze the given sentence and identify any grammatical, spelling, or punctuation errors.
-Return character-based indexes that match the original sentence exactly, including spaces and punctuation.
+					content: `Analyze the given sentence and identify any grammatical or spelling errors.
+Return character-based indices that match the original sentence exactly, including spaces and punctuation.
 
 For each error, return:
 - 'word': the incorrect word or phrase
